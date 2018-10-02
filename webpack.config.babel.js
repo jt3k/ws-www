@@ -42,5 +42,11 @@ export default {
 			}
 		]
 	},
+	// options for resolving module requests
+	// (does not apply to resolving to loaders)
+	resolve: {
+		modules: [path.resolve(__dirname, "node_modules"), "node_modules"],
+		extensions: [".js", ".json", ".jsx", ".css"]
+	},
 	plugins: [new HtmlWebpackPlugin(htmlPluginOptions)]
 };
